@@ -15,6 +15,9 @@
 		3637E3712BF754740052AF13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3637E36F2BF754740052AF13 /* Main.storyboard */; };
 		3637E3732BF754750052AF13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3637E3722BF754750052AF13 /* Assets.xcassets */; };
 		3637E3762BF754750052AF13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3637E3742BF754750052AF13 /* LaunchScreen.storyboard */; };
+		3637E3832BF77D160052AF13 /* memory2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3637E3822BF77D160052AF13 /* memory2.png */; };
+		3637E3852BF785B70052AF13 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 3637E3842BF785B70052AF13 /* speaker.png */; };
+		3637E3872BF7884C0052AF13 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 3637E3862BF7884C0052AF13 /* line.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		3637E3702BF754740052AF13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3637E3722BF754750052AF13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3637E3752BF754750052AF13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3637E3822BF77D160052AF13 /* memory2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memory2.png; sourceTree = "<group>"; };
+		3637E3842BF785B70052AF13 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
+		3637E3862BF7884C0052AF13 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 		3637E3642BF754740052AF13 /* AgeCognitionTrain */ = {
 			isa = PBXGroup;
 			children = (
+				3637E3862BF7884C0052AF13 /* line.png */,
+				3637E3842BF785B70052AF13 /* speaker.png */,
+				3637E3822BF77D160052AF13 /* memory2.png */,
 				3637E3652BF754740052AF13 /* AppDelegate.swift */,
 				3637E3672BF754740052AF13 /* GameScene.sks */,
 				3637E3692BF754740052AF13 /* Actions.sks */,
@@ -130,6 +139,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3637E3712BF754740052AF13 /* Main.storyboard in Resources */,
+				3637E3852BF785B70052AF13 /* speaker.png in Resources */,
+				3637E3832BF77D160052AF13 /* memory2.png in Resources */,
+				3637E3872BF7884C0052AF13 /* line.png in Resources */,
 				3637E3682BF754740052AF13 /* GameScene.sks in Resources */,
 				3637E3732BF754750052AF13 /* Assets.xcassets in Resources */,
 				3637E3762BF754750052AF13 /* LaunchScreen.storyboard in Resources */,
