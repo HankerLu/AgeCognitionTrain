@@ -19,18 +19,20 @@
                                 <rect key="frame" x="85" y="163" width="465" height="698"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VLi-aZ-DkO">
-                                <rect key="frame" x="782" y="93" width="363" height="340"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YaP-IQ-4q7">
-                                <rect key="frame" x="782" y="478" width="545" height="436"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3lD-ha-H7r">
                                 <rect key="frame" x="632" y="31" width="32" height="963"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6K-VI-8yu">
+                                <rect key="frame" x="881" y="143" width="263" height="281"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="speaker.png"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Z3N-kA-goW" appends="YES" id="cvy-Ef-Ptp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,12 +40,21 @@
                     <connections>
                         <outlet property="imageView" destination="6Rh-Bs-24b" id="s8Z-7t-E0p"/>
                         <outlet property="lineImageView" destination="3lD-ha-H7r" id="d8f-EE-t53"/>
-                        <outlet property="speakerImageView" destination="VLi-aZ-DkO" id="Qi1-NQ-VvS"/>
+                        <outlet property="longPressGestureRecognizer" destination="Z3N-kA-goW" id="fbF-vh-bZu"/>
+                        <outlet property="recordButton" destination="P6K-VI-8yu" id="esp-43-yKc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.10000000000000001" id="Z3N-kA-goW">
+                    <connections>
+                        <action selector="handleLongPressWithGesture:" destination="BV1-FR-VrT" id="2EY-wq-Ucb"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="47.87701317715959" y="-2.34375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="speaker.png" width="176" height="157"/>
+    </resources>
 </document>

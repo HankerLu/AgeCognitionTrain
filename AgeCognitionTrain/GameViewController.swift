@@ -12,11 +12,40 @@ import GameplayKit
 class GameViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var speakerImageView: UIImageView!
     @IBOutlet weak var lineImageView: UIImageView!
+    @IBOutlet weak var recordButton: UIButton!
+    
+    @IBOutlet weak var longPressGestureRecognizer: UILongPressGestureRecognizer!
+    var isLongPressActive = false
+    var timer: Timer?
 
+    @objc func longPressAction() {
+        if isLongPressActive {
+            // 在这里执行长按时需要持续进行的操作
+            print("longPressAction is being executed.")
+        }
+    }
+
+    @IBAction func handleLongPress(gesture: UILongPressGestureRecognizer) {
+        print("handleLongPress is being executed.")
+        switch gesture.state {
+        case .began:
+            // 长按开始
+            isLongPressActive = true
+            // 启动定时器，每隔一定时间执行特定函数
+            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(longPressAction), userInfo: nil, repeats: true)
+        case .ended, .cancelled, .failed:
+            // 长按结束
+            isLongPressActive = false
+            timer?.invalidate() // 停止定时器
+        default:
+            break
+        }
+   }
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("GameViewController viewDidLoad")
+        
         // 设置背景颜色为白色
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
@@ -35,8 +64,9 @@ class GameViewController: UIViewController {
             //设置imageView的屏幕大小
             // imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.height, height: 500)
             imageView.image = UIImage(named: "memory2")
-            speakerImageView.image = UIImage(named: "speaker")
             lineImageView.image = UIImage(named: "line")
+            recordButton.imageView?.image = UIImage(named: "speaker")
+            recordButton.addGestureRecognizer(longPressGestureRecognizer)
         }
     }
 
