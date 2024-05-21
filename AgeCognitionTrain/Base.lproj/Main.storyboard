@@ -24,6 +24,16 @@
                                 <rect key="frame" x="574" y="12" width="32" height="796"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6K-VI-8yu">
+                                <rect key="frame" x="816" y="99" width="200" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="speaker.png"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Z3N-kA-goW" appends="YES" id="cvy-Ef-Ptp"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IyY-8S-EAy">
                                 <rect key="frame" x="660" y="270" width="510" height="524"/>
                             </imageView>
@@ -34,14 +44,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6K-VI-8yu">
-                                <rect key="frame" x="816" y="99" width="200" height="131"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKb-FA-wkh">
+                                <rect key="frame" x="1086" y="24" width="94" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="speaker.png"/>
+                                <buttonConfiguration key="configuration" style="plain" title="认知训练"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Z3N-kA-goW" appends="YES" id="cvy-Ef-Ptp"/>
+                                    <segue destination="cmb-fE-VsW" kind="presentation" modalPresentationStyle="fullScreen" id="cfK-0b-Z8b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -80,11 +90,30 @@
             </objects>
             <point key="canvasLocation" x="47.107438016528924" y="-2.877697841726619"/>
         </scene>
+        <!--Train View Controller-->
+        <scene sceneID="D4E-6L-o5B">
+            <objects>
+                <viewController id="cmb-fE-VsW" customClass="TrainViewController" customModule="AgeCognitionTrain" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AgF-cN-DtE">
+                        <rect key="frame" x="0.0" y="0.0" width="1210" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Q4K-kw-M0y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="P8t-Fn-lVf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Muj-qX-gKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="1092"/>
+        </scene>
     </scenes>
     <resources>
         <image name="speaker.png" width="176" height="157"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
