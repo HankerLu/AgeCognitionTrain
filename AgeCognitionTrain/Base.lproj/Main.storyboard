@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="ipad12_9" orientation="landscape" layout="fullscreen" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,19 +14,28 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="AgeCognitionTrain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1210" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Rh-Bs-24b">
-                                <rect key="frame" x="85" y="163" width="465" height="698"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Rh-Bs-24b">
+                                <rect key="frame" x="30" y="40" width="520" height="754"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3lD-ha-H7r">
-                                <rect key="frame" x="632" y="31" width="32" height="963"/>
+                                <rect key="frame" x="574" y="12" width="32" height="796"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IyY-8S-EAy">
+                                <rect key="frame" x="660" y="270" width="510" height="524"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oCY-OL-dsH">
+                                <rect key="frame" x="700" y="320" width="430" height="324"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6K-VI-8yu">
-                                <rect key="frame" x="881" y="143" width="263" height="281"/>
+                                <rect key="frame" x="816" y="99" width="200" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
@@ -34,21 +44,23 @@
                                     <outletCollection property="gestureRecognizers" destination="Z3N-kA-goW" appends="YES" id="cvy-Ef-Ptp"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IyY-8S-EAy">
-                                <rect key="frame" x="744" y="432" width="536" height="501"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="我今天生日啦。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oCY-OL-dsH">
-                                <rect key="frame" x="791" y="468" width="441" height="428"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IyY-8S-EAy" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" constant="660" id="0AL-1a-efn"/>
+                            <constraint firstItem="6Rh-Bs-24b" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" constant="40" id="7Hw-5W-i5Z"/>
+                            <constraint firstItem="6Rh-Bs-24b" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailing" constant="-660" id="Gkh-wZ-Mwe"/>
+                            <constraint firstItem="oCY-OL-dsH" firstAttribute="bottom" secondItem="IyY-8S-EAy" secondAttribute="bottom" constant="-150" id="Ls2-T2-Kyk"/>
+                            <constraint firstItem="6Rh-Bs-24b" firstAttribute="bottom" secondItem="3se-qz-xqx" secondAttribute="bottom" constant="-40" id="RSt-VG-BeA"/>
+                            <constraint firstItem="IyY-8S-EAy" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" constant="270" id="UZK-YG-XKX"/>
+                            <constraint firstItem="IyY-8S-EAy" firstAttribute="bottom" secondItem="3se-qz-xqx" secondAttribute="bottom" constant="-40" id="XWa-dO-ihj"/>
+                            <constraint firstItem="IyY-8S-EAy" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailing" constant="-40" id="Y6f-JN-nfK"/>
+                            <constraint firstItem="oCY-OL-dsH" firstAttribute="leading" secondItem="IyY-8S-EAy" secondAttribute="leading" constant="40" id="aMP-5u-CND"/>
+                            <constraint firstItem="oCY-OL-dsH" firstAttribute="trailing" secondItem="IyY-8S-EAy" secondAttribute="trailing" constant="-40" id="ern-Kw-WZR"/>
+                            <constraint firstItem="6Rh-Bs-24b" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" constant="30" id="wnu-vz-thV"/>
+                            <constraint firstItem="oCY-OL-dsH" firstAttribute="top" secondItem="IyY-8S-EAy" secondAttribute="top" constant="50" id="yuS-bv-Ixr"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="editorImageView" destination="IyY-8S-EAy" id="4ct-bt-Q3z"/>
@@ -66,13 +78,13 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="47.87701317715959" y="-2.34375"/>
+            <point key="canvasLocation" x="47.107438016528924" y="-2.877697841726619"/>
         </scene>
     </scenes>
     <resources>
         <image name="speaker.png" width="176" height="157"/>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

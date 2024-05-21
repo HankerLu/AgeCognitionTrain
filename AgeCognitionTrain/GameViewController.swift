@@ -16,14 +16,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var editorImageView: UIImageView!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var editorTextView: UITextView!
-    
     @IBOutlet weak var longPressGestureRecognizer: UILongPressGestureRecognizer!
     
     var isLongPressActive = false
     var timer: Timer?
     var globalIndex = 0 // 全局变量来跟踪当前的索引位置
  
-    let mixedString = "你好，Hello，世界！World！"
+    let mixedString = "一个年逾古稀的长者，她手中拿着一叠叠陈旧的照片，眼神中透着坚定与力量，向儿子倾情诉说着往事。这不仅是对抗岁月的一种方式，更是对抗认知记忆衰退的勇气表现。在她的故事中，每一张照片都是一个章节，记录着他曾经历过的点滴。有的是青涩的岁月，有的是挑战与困难，而有的则是甜蜜与幸福。他将这些回忆翻看一遍又一遍，仿佛重新演绎了自己的一生。而这些老照片，也成为了他与时光抗衡的武器，每一张都是对岁月的胜利宣言。"
     var lengthIndex: Int = 0
 
     func getNextCharacter(from string: String) -> String? {
@@ -91,6 +90,8 @@ class GameViewController: UIViewController {
             //设置imageView的屏幕大小
             // imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.height, height: 500)
             imageView.image = UIImage(named: "memory2")
+            //使图片的大小与imageView大小一致
+            //imageView.image = imageView.image?.resizableImage(withCapInsets: .zero, resizingMode: .tile)//.resizableImage(withCapInsets: .zero, resizingMode: .tile)
             lineImageView.image = UIImage(named: "line")
             editorImageView.image = UIImage(named: "editor")
             recordButton.imageView?.image = UIImage(named: "speaker")
