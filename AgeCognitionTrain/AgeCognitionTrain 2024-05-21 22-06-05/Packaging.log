@@ -1,0 +1,188 @@
+2024-05-21 14:05:59 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x4538fb410; archive(resolved)="<IDEArchive: 0x600019180180>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodiOSAdHoc: 0x600007918960>", team(resolved)="<IDEProvisioningDisambiguatableBasicTeam: 0x60000262d840; teamID='XTGL9G753G', teamName='DECO MATCHES LIMITED', teamType='(null)', username='(null)', isFreeProvisioningTeam='0'>">
+	Chain (15, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x4538fb410; archive = "<IDEArchive: 0x600019180180>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600007918960>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000262d840; teamID='XTGL9G753G', teamName='DECO MATCHES LIMITED', teamType='(null)', username='(null)', isFreeProvisioningTeam='0'>">
+	<IDEDistributionProcessingPipelineContext: 0x4538e0b80; archive = "<IDEArchive: 0x600019180180>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600007918960>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000262d840; teamID='XTGL9G753G', teamName='DECO MATCHES LIMITED', teamType='(null)', username='(null)', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x440122c10; archive = "<IDEArchive: 0x600019180180>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600007918960>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000262d840; teamID='XTGL9G753G', teamName='DECO MATCHES LIMITED', teamType='(null)', username='(null)', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x45391e280; archive = "<IDEArchive: 0x600019180180>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600007918960>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000262d840; teamID='XTGL9G753G', teamName='DECO MATCHES LIMITED', teamType='(null)', username='(null)', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x4539237d0; archive = "<IDEArchive: 0x600019180180>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600007918960>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000262d840; teamID='XTGL9G753G', teamName='DECO MATCHES LIMITED', teamType='(null)', username='(null)', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x45396a4b0; archive = "<IDEArchive: 0x600019180180>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600007918960>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000262d840; teamID='XTGL9G753G', teamName='DECO MATCHES LIMITED', teamType='(null)', username='(null)', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x43ff507d0; archive = "<IDEArchive: 0x600019180180>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600007918960>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000262d840; teamID='XTGL9G753G', teamName='DECO MATCHES LIMITED', teamType='(null)', username='(null)', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x12060e960; archive = "<IDEArchive: 0x600019180180>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600007918960>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000262d840; teamID='XTGL9G753G', teamName='DECO MATCHES LIMITED', teamType='(null)', username='(null)', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x45396c4e0; archive = "<IDEArchive: 0x600019180180>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600007918960>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000262d840; teamID='XTGL9G753G', teamName='DECO MATCHES LIMITED', teamType='(null)', username='(null)', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x453973e50; archive = "<IDEArchive: 0x600019180180>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600007918960>", team="(null)">
+	<IDEDistributionContext: 0x440196d10; archive = "<IDEArchive: 0x600019180180>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600007918960>", team="(null)">
+	<IDEDistributionContext: 0x4536f8250; archive = "<IDEArchive: 0x600019180180>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600007918960>", team="(null)">
+	<IDEDistributionContext: 0x453958dd0; archive = "<IDEArchive: 0x600019180180>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600007918960>", team="(null)">
+	<IDEDistributionContext: 0x45366de90; archive = "<IDEArchive: 0x600019180180>", distributionMethod="(null)", team="(null)">
+	<IDEDistributionContext: 0x4539189c0; archive = "<IDEArchive: 0x600019180180>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0x4538fb410>
+2024-05-21 14:05:59 +0000  Processing step: IDEDistributionCreateDestRootStep
+2024-05-21 14:05:59 +0000  Processing step: IDEDistributionCopyItemStep
+2024-05-21 14:05:59 +0000  Running /usr/bin/ditto '-V' '/Users/hankerlu/Library/Developer/Xcode/Archives/2024-05-21/AgeCognitionTrain 2024-5-21, 22.05.xcarchive/Products/Applications/AgeCognitionTrain.app' '/var/folders/yj/vf99d5y924l_3vh1_5x0nmcw0000gn/T/XcodeDistPipeline.~~~dYNs3I/Root/Payload/AgeCognitionTrain.app'
+2024-05-21 14:05:59 +0000  >>> Copying /Users/hankerlu/Library/Developer/Xcode/Archives/2024-05-21/AgeCognitionTrain 2024-5-21, 22.05.xcarchive/Products/Applications/AgeCognitionTrain.app 
+2024-05-21 14:05:59 +0000  copying file ./_CodeSignature/CodeResources ... 
+2024-05-21 14:05:59 +0000  6811 bytes for ./_CodeSignature/CodeResources
+2024-05-21 14:05:59 +0000  copying file ./memory2.png ... 
+2024-05-21 14:05:59 +0000  5480102 bytes for ./memory2.png
+2024-05-21 14:05:59 +0000  copying file ./guosenze.png ... 
+255658 bytes for ./guosenze.png
+copying file ./zangyuanyuan.png ... 
+2024-05-21 14:05:59 +0000  1065548 bytes for ./zangyuanyuan.png
+2024-05-21 14:05:59 +0000  copying file ./editor.png ... 
+2024-05-21 14:05:59 +0000  12307 bytes for ./editor.png
+2024-05-21 14:05:59 +0000  copying file ./Base.lproj/Main.storyboardc/cmb-fE-VsW-view-AgF-cN-DtE.nib ... 
+2024-05-21 14:05:59 +0000  7331 bytes for ./Base.lproj/Main.storyboardc/cmb-fE-VsW-view-AgF-cN-DtE.nib
+2024-05-21 14:05:59 +0000  copying file ./Base.lproj/Main.storyboardc/UIViewController-BV1-FR-VrT.nib ... 
+2024-05-21 14:05:59 +0000  1806 bytes for ./Base.lproj/Main.storyboardc/UIViewController-BV1-FR-VrT.nib
+2024-05-21 14:05:59 +0000  copying file ./Base.lproj/Main.storyboardc/BV1-FR-VrT-view-3se-qz-xqx.nib ... 
+2024-05-21 14:05:59 +0000  7016 bytes for ./Base.lproj/Main.storyboardc/BV1-FR-VrT-view-3se-qz-xqx.nib
+2024-05-21 14:05:59 +0000  copying file ./Base.lproj/Main.storyboardc/UIViewController-cmb-fE-VsW.nib ... 
+2024-05-21 14:05:59 +0000  1088 bytes for ./Base.lproj/Main.storyboardc/UIViewController-cmb-fE-VsW.nib
+2024-05-21 14:05:59 +0000  copying file ./Base.lproj/Main.storyboardc/Info.plist ... 
+2024-05-21 14:05:59 +0000  333 bytes for ./Base.lproj/Main.storyboardc/Info.plist
+2024-05-21 14:05:59 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2024-05-21 14:05:59 +0000  1225 bytes for ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+2024-05-21 14:05:59 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2024-05-21 14:05:59 +0000  924 bytes for ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+2024-05-21 14:05:59 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2024-05-21 14:05:59 +0000  258 bytes for ./Base.lproj/LaunchScreen.storyboardc/Info.plist
+2024-05-21 14:05:59 +0000  copying file ./liwenjie.png ... 
+2024-05-21 14:05:59 +0000  283688 bytes for ./liwenjie.png
+2024-05-21 14:05:59 +0000  copying file ./caiminghao.png ... 
+2024-05-21 14:05:59 +0000  1512605 bytes for ./caiminghao.png
+2024-05-21 14:05:59 +0000  copying file ./GameScene.sks ... 
+2024-05-21 14:05:59 +0000  4015 bytes for ./GameScene.sks
+2024-05-21 14:05:59 +0000  copying file ./luhuanpeng.png ... 
+2024-05-21 14:05:59 +0000  944314 bytes for ./luhuanpeng.png
+2024-05-21 14:05:59 +0000  copying file ./AgeCognitionTrain ... 
+2024-05-21 14:05:59 +0000  110848 bytes for ./AgeCognitionTrain
+2024-05-21 14:05:59 +0000  copying file ./line.png ... 
+2024-05-21 14:05:59 +0000  3999 bytes for ./line.png
+2024-05-21 14:05:59 +0000  copying file ./embedded.mobileprovision ... 
+2024-05-21 14:05:59 +0000  19021 bytes for ./embedded.mobileprovision
+2024-05-21 14:05:59 +0000  copying file ./speaker.png ... 
+2024-05-21 14:05:59 +0000  13281 bytes for ./speaker.png
+2024-05-21 14:05:59 +0000  copying file ./Info.plist ... 
+2024-05-21 14:05:59 +0000  1066 bytes for ./Info.plist
+2024-05-21 14:05:59 +0000  copying file ./Actions.sks ... 
+2024-05-21 14:05:59 +0000  1892 bytes for ./Actions.sks
+2024-05-21 14:05:59 +0000  copying file ./PkgInfo ... 
+2024-05-21 14:05:59 +0000  8 bytes for ./PkgInfo
+2024-05-21 14:05:59 +0000  /usr/bin/ditto exited with 0
+2024-05-21 14:05:59 +0000  Processing step: IDEDistributionEmbedProfileStep
+2024-05-21 14:05:59 +0000  Processing step: IDEDistributionInfoPlistStep
+2024-05-21 14:05:59 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2024-05-21 14:05:59 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2024-05-21 14:05:59 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2024-05-21 14:05:59 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2024-05-21 14:05:59 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2024-05-21 14:05:59 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2024-05-21 14:05:59 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2024-05-21 14:05:59 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2024-05-21 14:05:59 +0000  Processing step: IDEDistributionSymbolsStep
+2024-05-21 14:05:59 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2024-05-21 14:05:59 +0000  Processing step: IDEDistributionAppThinningStep
+2024-05-21 14:05:59 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2024-05-21 14:05:59 +0000  Processing step: IDEDistributionArchThinningStep
+2024-05-21 14:05:59 +0000  Item /Users/hankerlu/Library/Developer/Xcode/Archives/2024-05-21/AgeCognitionTrain 2024-5-21, 22.05.xcarchive/Products/Applications/AgeCognitionTrain.app doesn't have the entitlement com.apple.developer.web-browser-engine.host enabled, returning ["arm64e"]
+2024-05-21 14:05:59 +0000  Archs to thin for item /Users/hankerlu/Library/Developer/Xcode/Archives/2024-05-21/AgeCognitionTrain 2024-5-21, 22.05.xcarchive/Products/Applications/AgeCognitionTrain.app are ["arm64e"]
+2024-05-21 14:05:59 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/yj/vf99d5y924l_3vh1_5x0nmcw0000gn/T/XcodeDistPipeline.~~~dYNs3I/Root/Payload/AgeCognitionTrain.app/AgeCognitionTrain' '-verify_arch' 'arm64e'
+2024-05-21 14:05:59 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2024-05-21 14:05:59 +0000  Skipping architecture thinning for item "AgeCognitionTrain" because arch "arm64e" wasn't found
+2024-05-21 14:05:59 +0000  Processing step: IDEDistributionODRStep
+2024-05-21 14:05:59 +0000  Processing step: IDEDistributionStripXattrsStep
+2024-05-21 14:05:59 +0000  Skipping stripping extended attributes because the codesign step will strip them.
+2024-05-21 14:05:59 +0000  Processing step: IDEDistributionCodesignStep
+2024-05-21 14:05:59 +0000  Entitlements for <IDEDistributionItem: 0x60001917a100; bundleID='com.ttkjwmzk.ttkj', path='<DVTFilePath:0x6000156c4c80:'/Users/hankerlu/Library/Developer/Xcode/Archives/2024-05-21/AgeCognitionTrain 2024-5-21, 22.05.xcarchive/Products/Applications/AgeCognitionTrain.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600031d00140; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600010e89440; name='iPhone Distribution: DECO MATCHES LIMITED (XTGL9G753G)', hash='ABBF97EF33E00C545D69622A500F4E8CB2449955', serialNumber='14BA703BFD02970785A291606D51C9A5', certificateKinds='(
+    "1.2.840.113635.100.6.1.4"
+), issueDate='2024-05-15 00:52:59 +0000''>', entitlements='{
+    "application-identifier" = "XTGL9G753G.com.ttkjwmzk.ttkj";
+    "com.apple.developer.team-identifier" = XTGL9G753G;
+    "get-task-allow" = 0;
+}', teamID='XTGL9G753G', identifier='com.ttkjwmzk.ttkj', executablePath='<DVTFilePath:0x6000156c5900:'/Users/hankerlu/Library/Developer/Xcode/Archives/2024-05-21/AgeCognitionTrain 2024-5-21, 22.05.xcarchive/Products/Applications/AgeCognitionTrain.app/AgeCognitionTrain'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "XTGL9G753G.com.ttkjwmzk.ttkj";
+    "com.apple.developer.team-identifier" = XTGL9G753G;
+    "get-task-allow" = 0;
+}
+2024-05-21 14:05:59 +0000  Associated App Clip Identifiers Filter: Skipping because "com.apple.developer.associated-appclip-app-identifiers" is not present
+2024-05-21 14:05:59 +0000  Entitlements for <IDEDistributionItem: 0x60001917a100; bundleID='com.ttkjwmzk.ttkj', path='<DVTFilePath:0x6000156c4c80:'/Users/hankerlu/Library/Developer/Xcode/Archives/2024-05-21/AgeCognitionTrain 2024-5-21, 22.05.xcarchive/Products/Applications/AgeCognitionTrain.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600031d00140; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600010e867c0; name='iPhone Distribution: DECO MATCHES LIMITED (XTGL9G753G)', hash='ABBF97EF33E00C545D69622A500F4E8CB2449955', serialNumber='14BA703BFD02970785A291606D51C9A5', certificateKinds='(
+    "1.2.840.113635.100.6.1.4"
+), issueDate='2024-05-15 00:52:59 +0000''>', entitlements='{
+    "application-identifier" = "XTGL9G753G.com.ttkjwmzk.ttkj";
+    "com.apple.developer.team-identifier" = XTGL9G753G;
+    "get-task-allow" = 0;
+}', teamID='XTGL9G753G', identifier='com.ttkjwmzk.ttkj', executablePath='<DVTFilePath:0x6000156c5900:'/Users/hankerlu/Library/Developer/Xcode/Archives/2024-05-21/AgeCognitionTrain 2024-5-21, 22.05.xcarchive/Products/Applications/AgeCognitionTrain.app/AgeCognitionTrain'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "XTGL9G753G.com.ttkjwmzk.ttkj";
+    "com.apple.developer.team-identifier" = XTGL9G753G;
+    "get-task-allow" = 0;
+}
+2024-05-21 14:05:59 +0000  Writing entitlements for <IDEDistributionItem: 0x60001917a100; bundleID='com.ttkjwmzk.ttkj', path='<DVTFilePath:0x6000156c4c80:'/Users/hankerlu/Library/Developer/Xcode/Archives/2024-05-21/AgeCognitionTrain 2024-5-21, 22.05.xcarchive/Products/Applications/AgeCognitionTrain.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600031d00140; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600010e88c00; name='iPhone Distribution: DECO MATCHES LIMITED (XTGL9G753G)', hash='ABBF97EF33E00C545D69622A500F4E8CB2449955', serialNumber='14BA703BFD02970785A291606D51C9A5', certificateKinds='(
+    "1.2.840.113635.100.6.1.4"
+), issueDate='2024-05-15 00:52:59 +0000''>', entitlements='{
+    "application-identifier" = "XTGL9G753G.com.ttkjwmzk.ttkj";
+    "com.apple.developer.team-identifier" = XTGL9G753G;
+    "get-task-allow" = 0;
+}', teamID='XTGL9G753G', identifier='com.ttkjwmzk.ttkj', executablePath='<DVTFilePath:0x6000156c5900:'/Users/hankerlu/Library/Developer/Xcode/Archives/2024-05-21/AgeCognitionTrain 2024-5-21, 22.05.xcarchive/Products/Applications/AgeCognitionTrain.app/AgeCognitionTrain'>', hardenedRuntime='0'>'> to: /var/folders/yj/vf99d5y924l_3vh1_5x0nmcw0000gn/T/XcodeDistPipeline.~~~dYNs3I/entitlements~~~O4umNb
+2024-05-21 14:05:59 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'ABBF97EF33E00C545D69622A500F4E8CB2449955' '--entitlements' '/var/folders/yj/vf99d5y924l_3vh1_5x0nmcw0000gn/T/XcodeDistPipeline.~~~dYNs3I/entitlements~~~O4umNb' '--generate-entitlement-der' '--strip-disallowed-xattrs' '--preserve-metadata=identifier,flags,runtime' '/var/folders/yj/vf99d5y924l_3vh1_5x0nmcw0000gn/T/XcodeDistPipeline.~~~dYNs3I/Root/Payload/AgeCognitionTrain.app'
+2024-05-21 14:05:59 +0000  /var/folders/yj/vf99d5y924l_3vh1_5x0nmcw0000gn/T/XcodeDistPipeline.~~~dYNs3I/Root/Payload/AgeCognitionTrain.app: replacing existing signature
+2024-05-21 14:06:01 +0000  /var/folders/yj/vf99d5y924l_3vh1_5x0nmcw0000gn/T/XcodeDistPipeline.~~~dYNs3I/Root/Payload/AgeCognitionTrain.app: signed app bundle with Mach-O thin (arm64) [com.ttkjwmzk.ttkj]
+2024-05-21 14:06:01 +0000  /usr/bin/codesign exited with 0
+2024-05-21 14:06:01 +0000  Processing step: IDEDistributionZipODRItemStep
+2024-05-21 14:06:01 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2024-05-21 14:06:01 +0000  Processing step: IDEDistributionCreateIPAStep
+2024-05-21 14:06:01 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/yj/vf99d5y924l_3vh1_5x0nmcw0000gn/T/XcodeDistPipeline.~~~dYNs3I/Root' '/var/folders/yj/vf99d5y924l_3vh1_5x0nmcw0000gn/T/XcodeDistPipeline.~~~dYNs3I/Packages/AgeCognitionTrain.ipa'
+2024-05-21 14:06:01 +0000  >>> Copying /var/folders/yj/vf99d5y924l_3vh1_5x0nmcw0000gn/T/XcodeDistPipeline.~~~dYNs3I/Root 
+2024-05-21 14:06:01 +0000  copying file ./Payload/AgeCognitionTrain.app/_CodeSignature/CodeResources ... 
+2024-05-21 14:06:01 +0000  6811 bytes for ./Payload/AgeCognitionTrain.app/_CodeSignature/CodeResources
+2024-05-21 14:06:01 +0000  copying file ./Payload/AgeCognitionTrain.app/memory2.png ... 
+2024-05-21 14:06:01 +0000  5480102 bytes for ./Payload/AgeCognitionTrain.app/memory2.png
+copying file ./Payload/AgeCognitionTrain.app/guosenze.png ... 
+2024-05-21 14:06:01 +0000  255658 bytes for ./Payload/AgeCognitionTrain.app/guosenze.png
+copying file ./Payload/AgeCognitionTrain.app/zangyuanyuan.png ... 
+2024-05-21 14:06:01 +0000  1065548 bytes for ./Payload/AgeCognitionTrain.app/zangyuanyuan.png
+copying file ./Payload/AgeCognitionTrain.app/editor.png ... 
+2024-05-21 14:06:01 +0000  12307 bytes for ./Payload/AgeCognitionTrain.app/editor.png
+2024-05-21 14:06:01 +0000  copying file ./Payload/AgeCognitionTrain.app/Base.lproj/Main.storyboardc/cmb-fE-VsW-view-AgF-cN-DtE.nib ... 
+2024-05-21 14:06:01 +0000  7331 bytes for ./Payload/AgeCognitionTrain.app/Base.lproj/Main.storyboardc/cmb-fE-VsW-view-AgF-cN-DtE.nib
+2024-05-21 14:06:01 +0000  copying file ./Payload/AgeCognitionTrain.app/Base.lproj/Main.storyboardc/UIViewController-BV1-FR-VrT.nib ... 
+2024-05-21 14:06:01 +0000  1806 bytes for ./Payload/AgeCognitionTrain.app/Base.lproj/Main.storyboardc/UIViewController-BV1-FR-VrT.nib
+copying file ./Payload/AgeCognitionTrain.app/Base.lproj/Main.storyboardc/BV1-FR-VrT-view-3se-qz-xqx.nib ... 
+2024-05-21 14:06:01 +0000  7016 bytes for ./Payload/AgeCognitionTrain.app/Base.lproj/Main.storyboardc/BV1-FR-VrT-view-3se-qz-xqx.nib
+copying file ./Payload/AgeCognitionTrain.app/Base.lproj/Main.storyboardc/UIViewController-cmb-fE-VsW.nib ... 
+2024-05-21 14:06:01 +0000  1088 bytes for ./Payload/AgeCognitionTrain.app/Base.lproj/Main.storyboardc/UIViewController-cmb-fE-VsW.nib
+copying file ./Payload/AgeCognitionTrain.app/Base.lproj/Main.storyboardc/Info.plist ... 
+2024-05-21 14:06:01 +0000  333 bytes for ./Payload/AgeCognitionTrain.app/Base.lproj/Main.storyboardc/Info.plist
+2024-05-21 14:06:01 +0000  copying file ./Payload/AgeCognitionTrain.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2024-05-21 14:06:01 +0000  1225 bytes for ./Payload/AgeCognitionTrain.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./Payload/AgeCognitionTrain.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2024-05-21 14:06:01 +0000  924 bytes for ./Payload/AgeCognitionTrain.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Payload/AgeCognitionTrain.app/Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2024-05-21 14:06:01 +0000  258 bytes for ./Payload/AgeCognitionTrain.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
+copying file ./Payload/AgeCognitionTrain.app/liwenjie.png ... 
+2024-05-21 14:06:01 +0000  283688 bytes for ./Payload/AgeCognitionTrain.app/liwenjie.png
+copying file ./Payload/AgeCognitionTrain.app/caiminghao.png ... 
+2024-05-21 14:06:01 +0000  1512605 bytes for ./Payload/AgeCognitionTrain.app/caiminghao.png
+copying file ./Payload/AgeCognitionTrain.app/GameScene.sks ... 
+2024-05-21 14:06:01 +0000  4015 bytes for ./Payload/AgeCognitionTrain.app/GameScene.sks
+copying file ./Payload/AgeCognitionTrain.app/luhuanpeng.png ... 
+2024-05-21 14:06:01 +0000  944314 bytes for ./Payload/AgeCognitionTrain.app/luhuanpeng.png
+copying file ./Payload/AgeCognitionTrain.app/AgeCognitionTrain ... 
+2024-05-21 14:06:01 +0000  110848 bytes for ./Payload/AgeCognitionTrain.app/AgeCognitionTrain
+copying file ./Payload/AgeCognitionTrain.app/line.png ... 
+2024-05-21 14:06:01 +0000  3999 bytes for ./Payload/AgeCognitionTrain.app/line.png
+copying file ./Payload/AgeCognitionTrain.app/embedded.mobileprovision ... 
+2024-05-21 14:06:01 +0000  19021 bytes for ./Payload/AgeCognitionTrain.app/embedded.mobileprovision
+copying file ./Payload/AgeCognitionTrain.app/speaker.png ... 
+2024-05-21 14:06:01 +0000  13281 bytes for ./Payload/AgeCognitionTrain.app/speaker.png
+copying file ./Payload/AgeCognitionTrain.app/Info.plist ... 
+2024-05-21 14:06:01 +0000  1066 bytes for ./Payload/AgeCognitionTrain.app/Info.plist
+copying file ./Payload/AgeCognitionTrain.app/Actions.sks ... 
+2024-05-21 14:06:01 +0000  1892 bytes for ./Payload/AgeCognitionTrain.app/Actions.sks
+copying file ./Payload/AgeCognitionTrain.app/PkgInfo ... 
+2024-05-21 14:06:01 +0000  8 bytes for ./Payload/AgeCognitionTrain.app/PkgInfo
+2024-05-21 14:06:01 +0000  /usr/bin/ditto exited with 0
+2024-05-21 14:06:01 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2024-05-21 14:06:01 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2024-05-21 14:06:01 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2024-05-21 14:06:01 +0000  IDEDistributionItem init <DVTFilePath:0x6000156ab480:'/var/folders/yj/vf99d5y924l_3vh1_5x0nmcw0000gn/T/XcodeDistPipeline.~~~dYNs3I/Root/Payload/AgeCognitionTrain.app'>
+2024-05-21 14:06:01 +0000  Processing step: IDEDistributionCreateManifestStep

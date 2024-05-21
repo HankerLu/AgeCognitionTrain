@@ -7,6 +7,7 @@
 
 import UIKit
 
+import AudioToolbox
 
 class TrainViewController: UIViewController {
 
@@ -46,9 +47,11 @@ class TrainViewController: UIViewController {
         if imageNames[lastImageIndex] == "guosenze" {
             print("Correct!")
             scorePoint += 1
+            AudioServicesPlaySystemSound(SystemSoundID(1104))
         } else {
             print("Wrong!")
             scorePoint -= 1
+            AudioServicesPlaySystemSound(SystemSoundID(1010))
         }
         changeImage()
     }
@@ -61,9 +64,11 @@ class TrainViewController: UIViewController {
         if imageNames[lastImageIndex] == "zangyuanyuan" {
             print("Correct!")
             scorePoint += 1
+            AudioServicesPlaySystemSound(SystemSoundID(1104))
         } else {
             print("Wrong!")
             scorePoint -= 1
+            AudioServicesPlaySystemSound(SystemSoundID(1010))
         }
         changeImage()
     }
@@ -76,9 +81,11 @@ class TrainViewController: UIViewController {
         if imageNames[lastImageIndex] == "luhuanpeng" {
             print("Correct!")
             scorePoint += 1
+            AudioServicesPlaySystemSound(SystemSoundID(1104))
         } else {
             print("Wrong!")
             scorePoint -= 1
+            AudioServicesPlaySystemSound(SystemSoundID(1010))
         }
         changeImage()
     }
@@ -91,9 +98,11 @@ class TrainViewController: UIViewController {
         if imageNames[lastImageIndex] == "caiminghao" {
             print("Correct!")
             scorePoint += 1
+            AudioServicesPlaySystemSound(SystemSoundID(1104))
         } else {
             print("Wrong!")
             scorePoint -= 1
+            AudioServicesPlaySystemSound(SystemSoundID(1010))
         }
         changeImage()
     }
@@ -106,9 +115,11 @@ class TrainViewController: UIViewController {
         if imageNames[lastImageIndex] == "liwenjie" {
             print("Correct!")
             scorePoint += 1
+            AudioServicesPlaySystemSound(SystemSoundID(1104))
         } else {
             print("Wrong!")
             scorePoint -= 1
+            AudioServicesPlaySystemSound(SystemSoundID(1010))
         }
         changeImage()
     }
