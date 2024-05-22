@@ -16,6 +16,16 @@ class TrainViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var randomAnswerLabelLeft: UILabel!
     @IBOutlet weak var randomAnswerLabelRight: UILabel!
+
+    @IBOutlet weak var selectGuosenzeButton: UIButton!
+    @IBOutlet weak var selectZangyuanyuanButton: UIButton!
+    @IBOutlet weak var selectLuhuanpengButton: UIButton!
+    @IBOutlet weak var selectCaiminghaoButton: UIButton!
+    @IBOutlet weak var selectLiwenjieButton: UIButton!
+    @IBOutlet weak var tickAnswerLeftButton: UIButton!
+    @IBOutlet weak var crossAnswerLeftButton: UIButton!
+    @IBOutlet weak var tickAnswerRightButton: UIButton!
+    @IBOutlet weak var crossAnswerRightButton: UIButton!
     
     var isStartFlag = false
     var lastImageIndex = 0
@@ -25,7 +35,10 @@ class TrainViewController: UIViewController {
     var secondCounter: Double = 150.0
     var timer: DispatchSourceTimer?
     var randomAnswerLabelText = "none"
-    
+    var rushModeScoreLeft = 0
+    var rushModeScoreRight = 0
+    var currentMode = 0
+
     func changeImage() {
         lastImageIndex = currentImageIndex
         currentImageIndex = randomInt()
@@ -65,7 +78,65 @@ class TrainViewController: UIViewController {
             randomAnswerLabelLeft.text = "   无"
             randomAnswerLabelRight.text = "   无"
         }
-        scoreLabel.text = "分数: \(scorePoint)"
+        if currentMode == 1 {
+            scoreLabel.text = "\(rushModeScoreLeft) : \(rushModeScoreRight)"
+        }
+        else
+        {
+            scoreLabel.text = "分数: \(scorePoint)"
+        }
+    }
+
+    func initGameMode() {
+        isStartFlag = false
+        secondCounter = 150.0
+        scoreLabel.text = "分数：0"
+        timeLabel.text = "时间: 15.0"
+        randomAnswerLabelText = "none"
+        scorePoint = 0
+        rushModeScoreLeft = 0
+        rushModeScoreRight = 0
+        if currentMode == 0 {
+            selectGuosenzeButton.isHidden = false
+            selectZangyuanyuanButton.isHidden = false
+            selectLuhuanpengButton.isHidden = false
+            selectCaiminghaoButton.isHidden = false
+            selectLiwenjieButton.isHidden = false
+            randomAnswerLabelLeft.isHidden = true
+            randomAnswerLabelRight.isHidden = true
+            tickAnswerLeftButton.isHidden = true
+            crossAnswerLeftButton.isHidden = true
+            tickAnswerRightButton.isHidden = true
+            crossAnswerRightButton.isHidden = true
+        }
+        else if currentMode == 1 {
+            selectGuosenzeButton.isHidden = true
+            selectZangyuanyuanButton.isHidden = true
+            selectLuhuanpengButton.isHidden = true
+            selectCaiminghaoButton.isHidden = true
+            selectLiwenjieButton.isHidden = true
+            randomAnswerLabelLeft.isHidden = false
+            randomAnswerLabelRight.isHidden = false
+            tickAnswerLeftButton.isHidden = false
+            crossAnswerLeftButton.isHidden = false
+            tickAnswerRightButton.isHidden = false
+            crossAnswerRightButton.isHidden = false
+        }
+    }
+    @IBAction func chooseSelectMode(_ sender: Any)
+    {
+        if currentMode != 0 {
+            currentMode = 0
+            initGameMode()
+        }
+    }
+
+    @IBAction func chooseRushMode(_ sender: Any)
+    {
+        if currentMode != 1 {
+            currentMode = 1
+            initGameMode()
+        }
     }
 
     @IBAction func tickAnswerLeft(_ sender: Any) {
@@ -76,10 +147,12 @@ class TrainViewController: UIViewController {
         if imageNames[lastImageIndex] == randomAnswerLabelText {
             print("Left Judge Correct!")
             scorePoint += 1
+            rushModeScoreLeft += 1
             AudioServicesPlaySystemSound(SystemSoundID(1104))
         } else {
             print("Left Judge Wrong!")
             scorePoint -= 1
+            rushModeScoreLeft -= 1
             AudioServicesPlaySystemSound(SystemSoundID(1010))
         }
         changeImage() 
@@ -93,10 +166,12 @@ class TrainViewController: UIViewController {
         if imageNames[lastImageIndex] != randomAnswerLabelText {
             print("Left Judge Correct!")
             scorePoint += 1
+            rushModeScoreLeft += 1
             AudioServicesPlaySystemSound(SystemSoundID(1104))
         } else {
             print("Left Judge Wrong!")
             scorePoint -= 1
+            rushModeScoreLeft -= 1
             AudioServicesPlaySystemSound(SystemSoundID(1010))
         }
         changeImage()
@@ -110,10 +185,12 @@ class TrainViewController: UIViewController {
         if imageNames[lastImageIndex] == randomAnswerLabelText {
             print("Right Judge Correct!")
             scorePoint += 1
+            rushModeScoreRight += 1
             AudioServicesPlaySystemSound(SystemSoundID(1104))
         } else {
             print("Right Judge Wrong!")
             scorePoint -= 1
+            rushModeScoreRight -= 1
             AudioServicesPlaySystemSound(SystemSoundID(1010))
         }
         changeImage() 
@@ -127,10 +204,12 @@ class TrainViewController: UIViewController {
         if imageNames[lastImageIndex] != randomAnswerLabelText {
             print("Right Judge Correct!")
             scorePoint += 1
+            rushModeScoreRight += 1
             AudioServicesPlaySystemSound(SystemSoundID(1104))
         } else {
             print("Right Judge Wrong!")
             scorePoint -= 1
+            rushModeScoreRight -= 1
             AudioServicesPlaySystemSound(SystemSoundID(1010))
         }
         changeImage()
@@ -146,6 +225,9 @@ class TrainViewController: UIViewController {
         }
         isStartFlag = true
         self.secondCounter = 150.0
+        scorePoint = 0
+        rushModeScoreLeft = 0
+        rushModeScoreRight = 0
         changeImage()
         self.timer?.resume() // 启动定时器
     }
@@ -243,6 +325,7 @@ class TrainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        initGameMode()
         print("TrainViewController is loaded.")
         // Do any additional setup after loading the view.
         currentImageIndex = randomInt()

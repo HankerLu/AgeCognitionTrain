@@ -98,6 +98,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1210" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P90-y4-6Lq">
+                                <rect key="frame" x="243" y="139" width="724" height="557"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qu-Tb-d1a">
                                 <rect key="frame" x="1101" y="20" width="59" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -234,19 +238,42 @@
                                     <action selector="crossAnswerLeft:" destination="cmb-fE-VsW" eventType="touchUpInside" id="iBC-78-yyi"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P90-y4-6Lq">
-                                <rect key="frame" x="243" y="139" width="724" height="557"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBE-N8-I4E">
+                                <rect key="frame" x="908" y="20" width="59" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="抢答"/>
+                                <connections>
+                                    <action selector="chooseRushMode:" destination="cmb-fE-VsW" eventType="touchUpInside" id="Iqp-Ej-Fyw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWG-5S-zhS">
+                                <rect key="frame" x="812" y="20" width="59" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="单人"/>
+                                <connections>
+                                    <action selector="chooseSelectMode:" destination="cmb-fE-VsW" eventType="touchUpInside" id="7za-EW-ynC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q4K-kw-M0y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="P8t-Fn-lVf"/>
                     <connections>
+                        <outlet property="crossAnswerLeftButton" destination="3bx-T6-jYL" id="0gj-Fy-eqk"/>
+                        <outlet property="crossAnswerRightButton" destination="t3O-Jj-ybE" id="DRk-LK-6B5"/>
                         <outlet property="randomAnswerLabelLeft" destination="E5r-7X-hUH" id="l2h-oY-tdk"/>
                         <outlet property="randomAnswerLabelRight" destination="H7t-wv-O1R" id="Kk6-xc-Yl4"/>
                         <outlet property="scoreLabel" destination="6ZC-Oz-QUY" id="BEJ-3c-czh"/>
+                        <outlet property="selectCaiminghaoButton" destination="gD8-jD-fJ1" id="rCx-kw-Iwo"/>
+                        <outlet property="selectGuosenzeButton" destination="L1P-YS-rnu" id="FPh-2g-hNR"/>
+                        <outlet property="selectLiwenjieButton" destination="i7l-4h-HRB" id="2ME-KE-gSg"/>
+                        <outlet property="selectLuhuanpengButton" destination="LTe-nV-FL8" id="Try-Aj-Qax"/>
+                        <outlet property="selectZangyuanyuanButton" destination="lhI-Hk-yoc" id="l9p-pX-SF1"/>
+                        <outlet property="tickAnswerLeftButton" destination="fqZ-iM-y3C" id="iJ4-eU-vbf"/>
+                        <outlet property="tickAnswerRightButton" destination="6uF-Hz-rhb" id="zOW-cX-uZn"/>
                         <outlet property="timeLabel" destination="i8t-OK-gH0" id="46u-Vy-YVK"/>
                         <outlet property="trainGameImageView" destination="P90-y4-6Lq" id="JDB-mF-A2V"/>
                     </connections>
