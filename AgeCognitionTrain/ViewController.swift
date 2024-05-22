@@ -12,13 +12,16 @@ import AudioToolbox
 class TrainViewController: UIViewController {
 
     @IBOutlet weak var trainGameImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     var isStartFlag = false
     var lastImageIndex = 0
     var currentImageIndex = 0
     let imageNames = ["guosenze", "zangyuanyuan", "luhuanpeng", "caiminghao", "liwenjie"]
     var scorePoint = 0
+    var secondCounter: Double = 150.0
+    var timer: DispatchSourceTimer?
     
     func changeImage() {
         lastImageIndex = currentImageIndex
@@ -27,7 +30,7 @@ class TrainViewController: UIViewController {
             currentImageIndex = (currentImageIndex + 1) % 5
         }
         trainGameImageView.image = UIImage(named: imageNames[currentImageIndex])
-        nameLabel.text = "Score: \(scorePoint)"
+        scoreLabel.text = "分数: \(scorePoint)"
     }
 
     @IBAction func backToMain(_ sender: Any) {
@@ -36,7 +39,9 @@ class TrainViewController: UIViewController {
 
     @IBAction func startGame(_ sender: Any) {
         isStartFlag = true
+        self.secondCounter = 150.0
         changeImage()
+        self.timer?.resume() // 启动定时器
     }
 
     @IBAction func selectGuosenze(_ sender: Any) {
@@ -136,8 +141,31 @@ class TrainViewController: UIViewController {
         // Do any additional setup after loading the view.
         currentImageIndex = randomInt()
         trainGameImageView.image = UIImage(named: imageNames[currentImageIndex])
-        nameLabel.text = "none"
+        scoreLabel.text = "none"
+
+        self.timer = DispatchSource.makeTimerSource(queue: .main)
+        self.timer?.schedule(deadline: .now(), repeating: .milliseconds(100))
+        self.timer?.setEventHandler {
+            // 定时器触发时执行的代码
+            self.secondCounter -= 1.0
+            var display_time = self.secondCounter * 0.1
+            if display_time >= 0.0
+            {
+                // 将display_time显示小数点后一位
+                self.timeLabel.text = "时间: " +  (String(format: "%.1f", display_time))
+            }
+            else if self.isStartFlag == true
+            {
+                self.timer?.suspend()
+                self.isStartFlag = false
+            }
+        }
     }
+
+    deinit {
+        // 清理定时器
+        self.timer?.cancel()
+   }
     
 
     /*

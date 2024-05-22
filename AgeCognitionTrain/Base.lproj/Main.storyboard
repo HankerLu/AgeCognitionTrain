@@ -111,7 +111,7 @@
                                     <action selector="backToMain:" destination="cmb-fE-VsW" eventType="touchUpInside" id="XA5-lx-8Tg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZC-Oz-QUY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="分数： " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZC-Oz-QUY">
                                 <rect key="frame" x="151" y="46" width="465" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -177,13 +177,21 @@
                                     <action selector="startGame:" destination="cmb-fE-VsW" eventType="touchUpInside" id="2FN-o1-Is4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="时间： " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8t-OK-gH0">
+                                <rect key="frame" x="463" y="46" width="323" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q4K-kw-M0y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="P8t-Fn-lVf"/>
                     <connections>
-                        <outlet property="nameLabel" destination="6ZC-Oz-QUY" id="xJE-X9-vq7"/>
+                        <outlet property="scoreLabel" destination="6ZC-Oz-QUY" id="BEJ-3c-czh"/>
+                        <outlet property="timeLabel" destination="i8t-OK-gH0" id="46u-Vy-YVK"/>
                         <outlet property="trainGameImageView" destination="P90-y4-6Lq" id="JDB-mF-A2V"/>
                     </connections>
                 </viewController>
