@@ -14,7 +14,8 @@ class TrainViewController: UIViewController {
     @IBOutlet weak var trainGameImageView: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var randomAnswerLabel: UILabel!
+    @IBOutlet weak var randomAnswerLabelLeft: UILabel!
+    @IBOutlet weak var randomAnswerLabelRight: UILabel!
     
     var isStartFlag = false
     var lastImageIndex = 0
@@ -36,59 +37,99 @@ class TrainViewController: UIViewController {
         randomAnswerLabelText = imageNames[randomAnswerIndex]
         if randomAnswerLabelText == "guosenze"
         {
-            randomAnswerLabel.text = "郭森泽？"
+            randomAnswerLabelLeft.text = "郭森泽？"
+            randomAnswerLabelRight.text = "郭森泽？"
         }
         else if randomAnswerLabelText == "zangyuanyuan"
         {
-            randomAnswerLabel.text = "臧媛媛?"
+            randomAnswerLabelLeft.text = "臧媛媛?"
+            randomAnswerLabelRight.text = "臧媛媛?"
         }
         else if randomAnswerLabelText == "luhuanpeng"
         {
-            randomAnswerLabel.text = "卢欢鹏?"
+            randomAnswerLabelLeft.text = "卢欢鹏?"
+            randomAnswerLabelRight.text = "卢欢鹏?"
         }
         else if randomAnswerLabelText == "caiminghao"
         {
-            randomAnswerLabel.text = "蔡明皓?"
+            randomAnswerLabelLeft.text = "蔡明皓?"
+            randomAnswerLabelRight.text = "蔡明皓?"
         }
         else if randomAnswerLabelText == "liwenjie"
         {
-            randomAnswerLabel.text = "李文杰?"
+            randomAnswerLabelLeft.text = "李文杰?"
+            randomAnswerLabelRight.text = "李文杰?"
         }
         else
         {
-            randomAnswerLabel.text = "   无"
+            randomAnswerLabelLeft.text = "   无"
+            randomAnswerLabelRight.text = "   无"
         }
         scoreLabel.text = "分数: \(scorePoint)"
     }
 
-    @IBAction func tickAnswer(_ sender: Any) {
+    @IBAction func tickAnswerLeft(_ sender: Any) {
         if isStartFlag == false {
             return
         }
-        print("Tick answer, current answer name is \(randomAnswerLabel.text). Last image index name is \(imageNames[lastImageIndex])")
+        print("Left Tick answer, current answer name is \(randomAnswerLabelLeft.text). Last image index name is \(imageNames[lastImageIndex])")
         if imageNames[lastImageIndex] == randomAnswerLabelText {
-            print("Judge Correct!")
+            print("Left Judge Correct!")
             scorePoint += 1
             AudioServicesPlaySystemSound(SystemSoundID(1104))
         } else {
-            print("Judge Wrong!")
+            print("Left Judge Wrong!")
             scorePoint -= 1
             AudioServicesPlaySystemSound(SystemSoundID(1010))
         }
         changeImage() 
     }
 
-    @IBAction func crossAnswer(_ sender: Any) {
+    @IBAction func crossAnswerLeft(_ sender: Any) {
         if isStartFlag == false {
             return
         }
-        print("Cross answer, current answer name is \(randomAnswerLabel.text). Last image index name is \(imageNames[lastImageIndex])")
+        print("Left Cross answer, current answer name is \(randomAnswerLabelLeft.text). Last image index name is \(imageNames[lastImageIndex])")
         if imageNames[lastImageIndex] != randomAnswerLabelText {
-            print("Judge Correct!")
+            print("Left Judge Correct!")
             scorePoint += 1
             AudioServicesPlaySystemSound(SystemSoundID(1104))
         } else {
-            print("Judge Wrong!")
+            print("Left Judge Wrong!")
+            scorePoint -= 1
+            AudioServicesPlaySystemSound(SystemSoundID(1010))
+        }
+        changeImage()
+    }
+
+    @IBAction func tickAnswerRight(_ sender: Any) {
+        if isStartFlag == false {
+            return
+        }
+        print("Right Tick answer, current answer name is \(randomAnswerLabelRight.text). Last image index name is \(imageNames[lastImageIndex])")
+        if imageNames[lastImageIndex] == randomAnswerLabelText {
+            print("Right Judge Correct!")
+            scorePoint += 1
+            AudioServicesPlaySystemSound(SystemSoundID(1104))
+        } else {
+            print("Right Judge Wrong!")
+            scorePoint -= 1
+            AudioServicesPlaySystemSound(SystemSoundID(1010))
+        }
+        changeImage() 
+    }
+
+    @IBAction func crossAnswerRight(_ sender: Any) {
+        if isStartFlag == false {
+            return
+        }
+        print("Right Cross answer, current answer name is \(randomAnswerLabelRight.text). Last image index name is \(imageNames[lastImageIndex])")
+        if imageNames[lastImageIndex] != randomAnswerLabelText {
+            print("Right Judge Correct!")
+            scorePoint += 1
+            AudioServicesPlaySystemSound(SystemSoundID(1104))
+        } else {
+            print("Right Judge Wrong!")
             scorePoint -= 1
             AudioServicesPlaySystemSound(SystemSoundID(1010))
         }
@@ -206,7 +247,7 @@ class TrainViewController: UIViewController {
         // Do any additional setup after loading the view.
         currentImageIndex = randomInt()
         trainGameImageView.image = UIImage(named: imageNames[currentImageIndex])
-        scoreLabel.text = "none"
+        scoreLabel.text = "分数：0"
 
         self.timer = DispatchSource.makeTimerSource(queue: .main)
         self.timer?.schedule(deadline: .now(), repeating: .milliseconds(100))
