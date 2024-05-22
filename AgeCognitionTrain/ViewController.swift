@@ -32,12 +32,15 @@ class TrainViewController: UIViewController {
     var currentImageIndex = 0
     let imageNames = ["guosenze", "zangyuanyuan", "luhuanpeng", "caiminghao", "liwenjie"]
     var scorePoint = 0
-    var secondCounter: Double = 150.0
+    var secondCounter: Double = 300.0
+    var rushModeCounter: Double = 12.0
     var timer: DispatchSourceTimer?
+    var rushModeTimer: DispatchSourceTimer?
     var randomAnswerLabelText = "none"
     var rushModeScoreLeft = 0
     var rushModeScoreRight = 0
     var currentMode = 0
+    var isRushModeTimerRunning = false
 
     func changeImage() {
         lastImageIndex = currentImageIndex
@@ -86,10 +89,36 @@ class TrainViewController: UIViewController {
             scoreLabel.text = "分数: \(scorePoint)"
         }
     }
+    func rushModeTimerHandler()
+    {
+        rushModeCounter = 12.0
+        isRushModeTimerRunning = false
+        print("Rush Mode Timer Handler is being executed.")
+        tickAnswerLeftButton.isHidden = false
+        crossAnswerLeftButton.isHidden = false
+        tickAnswerRightButton.isHidden = false
+        crossAnswerRightButton.isHidden = false
+        rushModeTimer?.suspend()
+        changeImage()
+    }
+
+    func rushModeTimerStart()
+    {
+        print("Rush Mode Timer Start is being executed.")
+        tickAnswerLeftButton.isHidden = true
+        crossAnswerLeftButton.isHidden = true
+        tickAnswerRightButton.isHidden = true
+        crossAnswerRightButton.isHidden = true
+        if isRushModeTimerRunning == false
+        {
+            isRushModeTimerRunning = true
+            rushModeTimer?.resume()
+        }
+    }
 
     func initGameMode() {
         isStartFlag = false
-        secondCounter = 150.0
+        secondCounter = 300.0
         scoreLabel.text = "分数：0"
         timeLabel.text = "时间: 15.0"
         randomAnswerLabelText = "none"
@@ -140,7 +169,7 @@ class TrainViewController: UIViewController {
     }
 
     @IBAction func tickAnswerLeft(_ sender: Any) {
-        if isStartFlag == false {
+        if isStartFlag == false || isRushModeTimerRunning == true{
             return
         }
         print("Left Tick answer, current answer name is \(randomAnswerLabelLeft.text). Last image index name is \(imageNames[lastImageIndex])")
@@ -155,11 +184,11 @@ class TrainViewController: UIViewController {
             rushModeScoreLeft -= 1
             AudioServicesPlaySystemSound(SystemSoundID(1010))
         }
-        changeImage() 
+        rushModeTimerStart() 
     }
 
     @IBAction func crossAnswerLeft(_ sender: Any) {
-        if isStartFlag == false {
+        if isStartFlag == false || isRushModeTimerRunning == true{
             return
         }
         print("Left Cross answer, current answer name is \(randomAnswerLabelLeft.text). Last image index name is \(imageNames[lastImageIndex])")
@@ -174,11 +203,11 @@ class TrainViewController: UIViewController {
             rushModeScoreLeft -= 1
             AudioServicesPlaySystemSound(SystemSoundID(1010))
         }
-        changeImage()
+        rushModeTimerStart()
     }
 
     @IBAction func tickAnswerRight(_ sender: Any) {
-        if isStartFlag == false {
+        if isStartFlag == false || isRushModeTimerRunning == true {
             return
         }
         print("Right Tick answer, current answer name is \(randomAnswerLabelRight.text). Last image index name is \(imageNames[lastImageIndex])")
@@ -193,11 +222,11 @@ class TrainViewController: UIViewController {
             rushModeScoreRight -= 1
             AudioServicesPlaySystemSound(SystemSoundID(1010))
         }
-        changeImage() 
+        rushModeTimerStart() 
     }
 
     @IBAction func crossAnswerRight(_ sender: Any) {
-        if isStartFlag == false {
+        if isStartFlag == false || isRushModeTimerRunning == true {
             return
         }
         print("Right Cross answer, current answer name is \(randomAnswerLabelRight.text). Last image index name is \(imageNames[lastImageIndex])")
@@ -212,7 +241,7 @@ class TrainViewController: UIViewController {
             rushModeScoreRight -= 1
             AudioServicesPlaySystemSound(SystemSoundID(1010))
         }
-        changeImage()
+        rushModeTimerStart()
     }
 
     @IBAction func backToMain(_ sender: Any) {
@@ -224,7 +253,7 @@ class TrainViewController: UIViewController {
             return
         }
         isStartFlag = true
-        self.secondCounter = 150.0
+        self.secondCounter = 300.0
         scorePoint = 0
         rushModeScoreLeft = 0
         rushModeScoreRight = 0
@@ -348,6 +377,16 @@ class TrainViewController: UIViewController {
                 self.timer?.suspend()
                 self.isStartFlag = false
             }
+        }
+        self.rushModeTimer = DispatchSource.makeTimerSource(queue: .main)
+        self.rushModeTimer?.schedule(deadline: .now(), repeating: .milliseconds(100))
+        self.rushModeTimer?.setEventHandler {
+            self.rushModeCounter -= 1.0
+            if self.rushModeCounter <= 0.0
+            {
+                self.rushModeTimerHandler()
+            }
+            // 定时器触发时执行的代码
         }
     }
 
