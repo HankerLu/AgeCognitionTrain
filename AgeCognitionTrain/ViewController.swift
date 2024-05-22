@@ -42,6 +42,15 @@ class TrainViewController: UIViewController {
     var currentMode = 0
     var isRushModeTimerRunning = false
 
+    func updateRandomAnswerText() {
+        var random50Pecent = Int.random(in: 0...1)
+        if random50Pecent == 0 {
+            randomAnswerLabelText = imageNames[lastImageIndex]
+        } else {
+            var randomAnswerIndex = randomInt()
+            randomAnswerLabelText = imageNames[randomAnswerIndex]
+        }
+    }
     func changeImage() {
         lastImageIndex = currentImageIndex
         currentImageIndex = randomInt()
@@ -49,8 +58,7 @@ class TrainViewController: UIViewController {
             currentImageIndex = (currentImageIndex + 1) % 5
         }
         trainGameImageView.image = UIImage(named: imageNames[currentImageIndex])
-        var randomAnswerIndex = randomInt()
-        randomAnswerLabelText = imageNames[randomAnswerIndex]
+        updateRandomAnswerText()
         if randomAnswerLabelText == "guosenze"
         {
             randomAnswerLabelLeft.text = "郭森泽？"
