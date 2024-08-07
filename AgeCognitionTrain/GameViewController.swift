@@ -22,6 +22,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
     @IBOutlet weak var label4: UILabel!
+
+    @IBOutlet weak var label_detection: UILabel!
     
     var isLongPressActive = false
     var timer: Timer?
@@ -95,8 +97,14 @@ class GameViewController: UIViewController {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
                 
-                // Present the scene
-                view.presentScene(scene)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    // Present the scene
+                    view.presentScene(scene)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+                    // Present the scene
+                        self.label_detection.isHidden = false
+                    }
+                }
             }
             
             view.ignoresSiblingOrder = false

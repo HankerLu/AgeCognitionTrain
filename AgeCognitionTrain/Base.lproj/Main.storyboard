@@ -79,12 +79,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8s5-KF-eKt">
-                                <rect key="frame" x="80" y="111" width="75" height="35"/>
+                                <rect key="frame" x="73" y="111" width="90" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Screen 1"/>
                                 <connections>
                                     <segue destination="FUh-bL-WCP" kind="presentation" modalPresentationStyle="fullScreen" id="b8Y-fX-CjD"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYK-Dr-hEm">
+                                <rect key="frame" x="294" y="884" width="705" height="163"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Detected! 
+Ingredient:  Chicken
+Next Step: Put the meat into the pot</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.070043351070695814" green="0.15502979970323924" blue="0.70166508838383845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaQ-bN-alX">
+                                <rect key="frame" x="72" y="190" width="92" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Screen 2"/>
+                                <connections>
+                                    <segue destination="Joi-N9-zrL" kind="presentation" modalPresentationStyle="fullScreen" id="Jpl-xg-ZkQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,6 +117,7 @@
                         <outlet property="label2" destination="U19-aU-OvA" id="hLd-Vn-Uwu"/>
                         <outlet property="label3" destination="ym3-8N-BHm" id="X2F-SR-AAC"/>
                         <outlet property="label4" destination="gvF-Nk-iJO" id="9me-0R-fVL"/>
+                        <outlet property="label_detection" destination="dYK-Dr-hEm" id="pYV-5v-LiS"/>
                         <outlet property="lineImageView" destination="3lD-ha-H7r" id="d8f-EE-t53"/>
                         <outlet property="longPressGestureRecognizer" destination="Z3N-kA-goW" id="fbF-vh-bZu"/>
                         <outlet property="recordButton" destination="P6K-VI-8yu" id="esp-43-yKc"/>
@@ -302,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Muj-qX-gKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="72.892561983471083" y="1091.3669064748203"/>
+            <point key="canvasLocation" x="-768" y="1507"/>
         </scene>
         <!--Screen6 View Controller-->
         <scene sceneID="xaX-Cm-p6g">
@@ -362,8 +382,72 @@
             </objects>
             <point key="canvasLocation" x="920.86330935251806" y="-3.4710743801652892"/>
         </scene>
+        <!--Song Story View Controller-->
+        <scene sceneID="iQp-qt-Yet">
+            <objects>
+                <viewController id="Joi-N9-zrL" customClass="SongStoryViewController" customModule="AgeCognitionTrain" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GHf-Zm-CMh">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1210"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start remembering！！！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yo6-pD-ehf">
+                                <rect key="frame" x="105" y="333" width="709" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smelling..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNy-Th-qeF">
+                                <rect key="frame" x="141" y="123" width="552" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="130"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEt-SE-4l3">
+                                <rect key="frame" x="105" y="486" width="858" height="239"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">           Find related story:
+
+Learn making oyakodon with son Date: 2014.08.07（10 years ago）</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P60-5F-fuq">
+                                <rect key="frame" x="105" y="859" width="858" height="239"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">           Find related song:
+                
+              Oyakodon Song</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PEW-Wc-Jmb">
+                                <rect key="frame" x="361" y="788" width="112" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NM2-cz-yBS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="arrowImageView" destination="PEW-Wc-Jmb" id="7i5-18-bin"/>
+                        <outlet property="findSongLabel" destination="P60-5F-fuq" id="9UF-RN-aBD"/>
+                        <outlet property="findStoryLabel" destination="bEt-SE-4l3" id="bjl-M9-hEQ"/>
+                        <outlet property="rememberLabel" destination="yo6-pD-ehf" id="BHc-8Q-5Hq"/>
+                        <outlet property="smellingingLabel" destination="wNy-Th-qeF" id="3He-Fk-h1v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xvB-AN-GKu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47" y="773"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="arrow.down" catalog="system" width="118" height="128"/>
         <image name="arrowtriangle.down.fill" catalog="system" width="128" height="120"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="oyagodon.png" width="630" height="472"/>
