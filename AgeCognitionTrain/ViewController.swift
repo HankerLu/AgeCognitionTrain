@@ -374,7 +374,7 @@ class TrainViewController: UIViewController {
         self.timer?.setEventHandler {
             // 定时器触发时执行的代码
             self.secondCounter -= 1.0
-            var display_time = self.secondCounter * 0.1
+            let display_time = self.secondCounter * 0.1
             if display_time >= 0.0
             {
                 // 将display_time显示小数点后一位
